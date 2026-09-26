@@ -1,0 +1,31 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      VERCEL_ORG_ID: team_Wf2mIYmTmtSJvgOUqeQjBirL
+      VERCEL_PROJECT_ID: prj_lGBgkJzEPOKxeSzMlZI5F9TNyGGW
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check Vercel token
+        shell: bash
+        run: |
+          if [ -z "${{ secrets.VERCEL_TOKEN }}" ]; then
+            echo "::error::Missing repository or organization secret VERCEL_TOKEN"
+            exit 1
+          fi
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Pull Vercel project settings
+        run: vercel pull --yes --environment=production --token="${{ secrets.VERCEL_TOKEN }}"
+      - name: Deploy production
+        run: vercel deploy --prod --yes --token="${{ secrets.VERCEL_TOKEN }}"
