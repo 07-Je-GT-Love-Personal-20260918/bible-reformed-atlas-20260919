@@ -1,0 +1,27 @@
+name: Deploy Lord Day 25 to Surge
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "lordsday25/**"
+      - ".github/workflows/surge.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Check Surge token
+        shell: bash
+        run: |
+          if [ -z "${{ secrets.SURGE_TOKEN }}" ]; then
+            echo "::error::Missing repository or organization secret SURGE_TOKEN"
+            exit 1
+          fi
+      - name: Deploy
+        run: npx --yes surge ./lordsday25 lord-day-25-sacraments-20260926.surge.sh --token "${{ secrets.SURGE_TOKEN }}"
