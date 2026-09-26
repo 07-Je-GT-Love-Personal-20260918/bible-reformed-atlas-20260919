@@ -16,12 +16,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
-      - name: Check Surge token
+      - name: Check Surge credentials
         shell: bash
         run: |
-          if [ -z "${{ secrets.SURGE_TOKEN }}" ]; then
-            echo "::error::Missing repository or organization secret SURGE_TOKEN"
+          if [ -z "${{ secrets.SURGE_EMAIL }}" ] || [ -z "${{ secrets.SURGE_PASSWORD }}" ]; then
+            echo "::error::Missing SURGE_EMAIL or SURGE_PASSWORD repository/organization secrets"
             exit 1
           fi
+      - name: Mint temporary Surge token
+        id: surge_auth
+        shell: bash
+        env:
+          SURGE_EMAIL: ${{ secrets.SURGE_EMAIL }}
+          SURGE_PASSWORD: ${{ secrets.SURGE_PASSWORD }}
+        run: |
+          JSON="$(curl -fsS -X POST https://surge.surge.sh/token -u "$SURGE_EMAIL:$SURGE_PASSWORD")"
+          TOKEN="$(printf '%s' "$JSON" | python -c 'import sys,json; print(json.load(sys.stdin)["token"])')"
+          echo "::add-mask::$TOKEN"
+          echo "token=$TOKEN" >> "$GITHUB_OUTPUT"
       - name: Deploy
-        run: npx --yes surge ./lordsday25 lord-day-25-sacraments-20260926.surge.sh --token "${{ secrets.SURGE_TOKEN }}"
+        run: npx --yes surge ./lordsday25 lord-day-25-sacraments-20260926.surge.sh --token "${{ steps.surge_auth.outputs.token }}"
