@@ -23,6 +23,8 @@
 - Vercel：https://bible-reformed-atlas-2026.vercel.app/
 - Surge：https://bible-reformed-atlas-20260919.surge.sh/
 
+源码仓库：https://github.com/07-Je-GT-Love-Personal-20260918/bible-reformed-atlas-20260919
+
 保留现有仓库名和域名，版本日期记录于页面及提交中。
 
 ## 部署和维护
