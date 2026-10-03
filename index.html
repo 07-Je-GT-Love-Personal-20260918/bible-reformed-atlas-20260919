@@ -74,7 +74,7 @@ main{max-width:1480px;margin:0 auto;padding:0 28px 80px}.hero{display:grid;grid-
   <main>
     <section class="hero section" id="overview">
       <div>
-        <div class="eyebrow">The Whole Bible · One Redeeming Story</div><p class="version">研读版 v2.3 · 2026-10-03 · 从全景进入经文</p>
+        <div class="eyebrow">The Whole Bible · One Redeeming Story</div><p class="version">研读版 v2.4 · 2026-10-03 · 从全景进入经文</p>
         <h2>整本《圣经》<br>先看神的救赎，<br>再读人的历史。</h2>
         <p class="lead">从欧陆改革宗与正统大公信仰出发，这个页面把<b>时间线、故事线、圣约神学、圣经神学</b>四条轨道叠在一起，并进一步加入<b>地图、表格、图像、流程图、思维导图、动态图</b>，帮助你把最难记的“几个王、几个时代、几次被掳、先知对应、旧新约关系”变成一张可以反复浏览的全景地图。</p>
         <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:24px"><a class="btn primary" href="#storyflow">先看故事线</a><a class="btn" href="#timeline">背年代锚点</a><a class="btn" href="#maps">看地图</a><a class="btn" href="#kings">攻克诸王</a><a class="btn" href="#themes">看思维导图</a></div>
@@ -421,6 +421,7 @@ main{max-width:1480px;margin:0 auto;padding:0 28px 80px}.hero{display:grid;grid-
         <div class="chips" id="chips"></div>
       </div>
       <div class="book-guide"><b>读卡方法</b><p>先读时间与处境，再沿章节路线读经；用核心论证解释结构，用圣约与基督一栏检查正典关联。最后遮住卡片回答复述问题。卡片是释经提纲，不替代整卷经文。</p><p>年代栏区分叙事发生时代与书信写作处境；约数、未定与争议均明确标记。下文是改革宗教学归纳，信条引文请查原文；不得把解释争议冒充共同认信。经文链接为 ESV 英文原章，中文可按所列章节在和合本对照。</p></div>
+      <p><a class="btn" href="books/index.html">逐卷解读目录 →</a> · 66卷各有独立阅读页、重点段落及讨论答案。</p>
       <nav class="book-index" id="bookIndex" aria-label="66卷逐卷快速目录"></nav>
       <p class="book-count" id="bookCount" role="status" aria-live="polite"></p>
       <div class="books" id="bookGrid"></div>
@@ -491,7 +492,8 @@ const booksData = [
     "refs": "创12:1–3；15:1–6；50:15–21",
     "passage": "Genesis 12",
     "tagline": "起头与根基",
-    "era": "远古／列祖 → 埃及"
+    "era": "远古／列祖 → 埃及",
+    "studyPath": "books/01-genesis.html"
   },
   {
     "name": "出埃及记",
@@ -505,7 +507,8 @@ const booksData = [
     "refs": "出19:4–6；32:1–14；34:6–9；40:34–38",
     "passage": "Exodus 19",
     "tagline": "救赎与立约",
-    "era": "埃及 → 西奈"
+    "era": "埃及 → 西奈",
+    "studyPath": "books/02-exodus.html"
   },
   {
     "name": "利未记",
@@ -519,7 +522,8 @@ const booksData = [
     "refs": "利10:1–3；16:15–22；19:9–18；来10:1–14",
     "passage": "Leviticus 16",
     "tagline": "圣洁与亲近",
-    "era": "西奈会幕"
+    "era": "西奈会幕",
+    "studyPath": "books/03-leviticus.html"
   },
   {
     "name": "民数记",
@@ -533,7 +537,8 @@ const booksData = [
     "refs": "民14:1–25；21:4–9；26:1–4；林前10:1–13",
     "passage": "Numbers 14",
     "tagline": "旷野与不信",
-    "era": "西奈 → 摩押"
+    "era": "西奈 → 摩押",
+    "studyPath": "books/04-numbers.html"
   },
   {
     "name": "申命记",
@@ -547,7 +552,8 @@ const booksData = [
     "refs": "申6:4–9；8:11–18；17:14–20；30:1–10",
     "passage": "Deuteronomy 6",
     "tagline": "约的重申",
-    "era": "摩押 · 进地前"
+    "era": "摩押 · 进地前",
+    "studyPath": "books/05-deuteronomy.html"
   },
   {
     "name": "约书亚记",
@@ -561,7 +567,8 @@ const booksData = [
     "refs": "书2:8–14；21:43–45；24:14–24；来4:8–11",
     "passage": "Joshua 24",
     "tagline": "进地与分地",
-    "era": "约旦河 → 迦南"
+    "era": "约旦河 → 迦南",
+    "studyPath": "books/06-joshua.html"
   },
   {
     "name": "士师记",
@@ -575,7 +582,8 @@ const booksData = [
     "refs": "士2:11–19；8:22–27；21:25",
     "passage": "Judges 2",
     "tagline": "循环败坏",
-    "era": "进地后 · 支派时代"
+    "era": "进地后 · 支派时代",
+    "studyPath": "books/07-judges.html"
   },
   {
     "name": "路得记",
@@ -589,7 +597,8 @@ const booksData = [
     "refs": "得1:16–17；2:8–12；4:9–17；太1:5",
     "passage": "Ruth 4",
     "tagline": "黑暗中的恩典",
-    "era": "士师时代 · 伯利恒／摩押"
+    "era": "士师时代 · 伯利恒／摩押",
+    "studyPath": "books/08-ruth.html"
   },
   {
     "name": "撒母耳记上",
@@ -603,7 +612,8 @@ const booksData = [
     "refs": "撒上8:4–22；15:10–23；16:1–13；17:45–47",
     "passage": "1 Samuel 15",
     "tagline": "从士师到王",
-    "era": "王国初期 · 撒母耳／扫罗"
+    "era": "王国初期 · 撒母耳／扫罗",
+    "studyPath": "books/09-1-samuel.html"
   },
   {
     "name": "撒母耳记下",
@@ -617,7 +627,8 @@ const booksData = [
     "refs": "撒下7:8–16；11:1–27；12:1–14；路1:32–33",
     "passage": "2 Samuel 7",
     "tagline": "大卫之约",
-    "era": "大卫王朝 · 希伯仑／耶路撒冷"
+    "era": "大卫王朝 · 希伯仑／耶路撒冷",
+    "studyPath": "books/10-2-samuel.html"
   },
   {
     "name": "列王纪上",
@@ -631,7 +642,8 @@ const booksData = [
     "refs": "王上8:46–53；11:1–13；12:25–33；21:1–24",
     "passage": "1 Kings 12",
     "tagline": "王国荣耀与裂痕",
-    "era": "所罗门 → 分裂约前930 → 亚哈"
+    "era": "所罗门 → 分裂约前930 → 亚哈",
+    "studyPath": "books/11-1-kings.html"
   },
   {
     "name": "列王纪下",
@@ -645,7 +657,8 @@ const booksData = [
     "refs": "王下17:7–23；18:1–12；23:25–27；25:27–30",
     "passage": "2 Kings 17",
     "tagline": "审判成真",
-    "era": "北国亡前722/721；王掳597；城毁587/586"
+    "era": "北国亡前722/721；王掳597；城毁587/586",
+    "studyPath": "books/12-2-kings.html"
   },
   {
     "name": "历代志上",
@@ -659,7 +672,8 @@ const booksData = [
     "refs": "代上17:7–14；21:18–30；29:10–19",
     "passage": "1 Chronicles 29",
     "tagline": "大卫中心重述",
-    "era": "归回群体回读大卫"
+    "era": "归回群体回读大卫",
+    "studyPath": "books/13-1-chronicles.html"
   },
   {
     "name": "历代志下",
@@ -673,7 +687,8 @@ const booksData = [
     "refs": "代下7:11–22；30:1–12；33:10–17；36:15–23",
     "passage": "2 Chronicles 36",
     "tagline": "圣殿与王朝",
-    "era": "所罗门 → 毁城 → 古列诏令"
+    "era": "所罗门 → 毁城 → 古列诏令",
+    "studyPath": "books/14-2-chronicles.html"
   },
   {
     "name": "以斯拉记",
@@ -687,7 +702,8 @@ const booksData = [
     "refs": "拉3:10–13；6:13–18；7:10；9:5–15",
     "passage": "Ezra 7",
     "tagline": "圣殿归回",
-    "era": "归回；殿成约前516/515；以斯拉约458"
+    "era": "归回；殿成约前516/515；以斯拉约458",
+    "studyPath": "books/15-ezra.html"
   },
   {
     "name": "尼希米记",
@@ -701,7 +717,8 @@ const booksData = [
     "refs": "尼5:1–13；8:1–12；9:26–38；13:15–22",
     "passage": "Nehemiah 8",
     "tagline": "城墙与改革",
-    "era": "建墙约前445/444 · 波斯犹大省"
+    "era": "建墙约前445/444 · 波斯犹大省",
+    "studyPath": "books/16-nehemiah.html"
   },
   {
     "name": "以斯帖记",
@@ -715,7 +732,8 @@ const booksData = [
     "refs": "斯3:8–15；4:10–17；6:1–11；9:20–28",
     "passage": "Esther 4",
     "tagline": "隐秘护理",
-    "era": "波斯帝国 · 书珊"
+    "era": "波斯帝国 · 书珊",
+    "studyPath": "books/17-esther.html"
   },
   {
     "name": "约伯记",
@@ -729,7 +747,8 @@ const booksData = [
     "refs": "伯1:8–22；19:23–27；38:1–7；42:1–9",
     "passage": "Job 42",
     "tagline": "义人与苦难",
-    "era": "乌斯 · 年代未定"
+    "era": "乌斯 · 年代未定",
+    "studyPath": "books/18-job.html"
   },
   {
     "name": "诗篇",
@@ -743,7 +762,8 @@ const booksData = [
     "refs": "诗1–2；22；73；110；路24:44",
     "passage": "Psalms 73",
     "tagline": "约民的祷告本",
-    "era": "多时期诗集 · 以色列／锡安"
+    "era": "多时期诗集 · 以色列／锡安",
+    "studyPath": "books/19-psalms.html"
   },
   {
     "name": "箴言",
@@ -757,7 +777,8 @@ const booksData = [
     "refs": "箴1:7；8:22–31；26:4–5；31:8–9",
     "passage": "Proverbs 26",
     "tagline": "敬畏的智慧",
-    "era": "智慧集成 · 宫廷与日常"
+    "era": "智慧集成 · 宫廷与日常",
+    "studyPath": "books/20-proverbs.html"
   },
   {
     "name": "传道书",
@@ -771,7 +792,8 @@ const booksData = [
     "refs": "传2:18–26；3:1–14；9:7–10；12:13–14",
     "passage": "Ecclesiastes 12",
     "tagline": "日光之下的虚空",
-    "era": "智慧反思 · 年代有讨论"
+    "era": "智慧反思 · 年代有讨论",
+    "studyPath": "books/21-ecclesiastes.html"
   },
   {
     "name": "雅歌",
@@ -785,7 +807,8 @@ const booksData = [
     "refs": "歌2:7；4:1–7；8:6–7；弗5:25–32",
     "passage": "Song of Solomon 8",
     "tagline": "婚姻与爱",
-    "era": "婚恋诗歌 · 以色列乡野"
+    "era": "婚恋诗歌 · 以色列乡野",
+    "studyPath": "books/22-song-of-solomon.html"
   },
   {
     "name": "以赛亚书",
@@ -799,7 +822,8 @@ const booksData = [
     "refs": "赛6:1–13；7:1–17；40:1–11；52:13–53:12",
     "passage": "Isaiah 53",
     "tagline": "圣者与仆人",
-    "era": "前8世纪犹大 → 被掳／归回展望"
+    "era": "前8世纪犹大 → 被掳／归回展望",
+    "studyPath": "books/23-isaiah.html"
   },
   {
     "name": "耶利米书",
@@ -813,7 +837,8 @@ const booksData = [
     "refs": "耶7:1–15；29:4–14；31:31–34；来8:6–13",
     "passage": "Jeremiah 31",
     "tagline": "拆毁与栽植",
-    "era": "约西亚 → 前587/586毁城及其后"
+    "era": "约西亚 → 前587/586毁城及其后",
+    "studyPath": "books/24-jeremiah.html"
   },
   {
     "name": "耶利米哀歌",
@@ -827,7 +852,8 @@ const booksData = [
     "refs": "哀1:1–5；3:19–33；5:19–22",
     "passage": "Lamentations 3",
     "tagline": "废墟中的哀哭",
-    "era": "前587/586毁城后的哀歌"
+    "era": "前587/586毁城后的哀歌",
+    "studyPath": "books/25-lamentations.html"
   },
   {
     "name": "以西结书",
@@ -841,7 +867,8 @@ const booksData = [
     "refs": "结10:18–22；34:1–16；36:22–28；37:1–14",
     "passage": "Ezekiel 36",
     "tagline": "荣耀与更新",
-    "era": "前597被掳后 · 巴比伦"
+    "era": "前597被掳后 · 巴比伦",
+    "studyPath": "books/26-ezekiel.html"
   },
   {
     "name": "但以理书",
@@ -855,7 +882,8 @@ const booksData = [
     "refs": "但3:16–18；4:28–37；7:9–14；12:1–3",
     "passage": "Daniel 7",
     "tagline": "兽国与人子",
-    "era": "叙事：巴比伦 → 波斯"
+    "era": "叙事：巴比伦 → 波斯",
+    "studyPath": "books/27-daniel.html"
   },
   {
     "name": "何西阿书",
@@ -869,7 +897,8 @@ const booksData = [
     "refs": "何2:14–23；4:1–3；11:1–9；14:1–9",
     "passage": "Hosea 14",
     "tagline": "背约婚姻",
-    "era": "北国末期 · 亚述压力"
+    "era": "北国末期 · 亚述压力",
+    "studyPath": "books/28-hosea.html"
   },
   {
     "name": "约珥书",
@@ -883,7 +912,8 @@ const booksData = [
     "refs": "珥1:13–20；2:12–13；2:28–32；徒2:14–21",
     "passage": "Joel 2",
     "tagline": "灾难与圣灵",
-    "era": "蝗灾 · 年代未定"
+    "era": "蝗灾 · 年代未定",
+    "studyPath": "books/29-joel.html"
   },
   {
     "name": "阿摩司书",
@@ -897,7 +927,8 @@ const booksData = [
     "refs": "摩3:1–2；5:18–24；8:4–7；9:11–15",
     "passage": "Amos 5",
     "tagline": "公义的呼声",
-    "era": "耶罗波安二世 · 北国繁荣"
+    "era": "耶罗波安二世 · 北国繁荣",
+    "studyPath": "books/30-amos.html"
   },
   {
     "name": "俄巴底亚书",
@@ -911,7 +942,8 @@ const booksData = [
     "refs": "俄3–4；10–15；21",
     "passage": "Obadiah 1",
     "tagline": "以东受审",
-    "era": "以东／耶路撒冷 · 年代有讨论"
+    "era": "以东／耶路撒冷 · 年代有讨论",
+    "studyPath": "books/31-obadiah.html"
   },
   {
     "name": "约拿书",
@@ -925,7 +957,8 @@ const booksData = [
     "refs": "拿1:1–3；3:1–10；4:1–11；太12:39–41",
     "passage": "Jonah 4",
     "tagline": "列国怜悯",
-    "era": "约拿／尼尼微 · 前8世纪背景"
+    "era": "约拿／尼尼微 · 前8世纪背景",
+    "studyPath": "books/32-jonah.html"
   },
   {
     "name": "弥迦书",
@@ -939,7 +972,8 @@ const booksData = [
     "refs": "弥2:1–2；3:9–12；5:2–5；6:6–8；7:18–20",
     "passage": "Micah 6",
     "tagline": "审判与王的盼望",
-    "era": "前8世纪 · 犹大／两都"
+    "era": "前8世纪 · 犹大／两都",
+    "studyPath": "books/33-micah.html"
   },
   {
     "name": "那鸿书",
@@ -953,7 +987,8 @@ const booksData = [
     "refs": "鸿1:2–8；2:1–13；3:1–7",
     "passage": "Nahum 1",
     "tagline": "尼尼微终局",
-    "era": "挪亚们失陷约前664/663 → 尼尼微亡612"
+    "era": "挪亚们失陷约前664/663 → 尼尼微亡612",
+    "studyPath": "books/34-nahum.html"
   },
   {
     "name": "哈巴谷书",
@@ -967,7 +1002,8 @@ const booksData = [
     "refs": "哈1:2–4；1:12–17；2:2–4；3:16–19",
     "passage": "Habakkuk 3",
     "tagline": "因信得生",
-    "era": "南国末期 · 巴比伦兴起"
+    "era": "南国末期 · 巴比伦兴起",
+    "studyPath": "books/35-habakkuk.html"
   },
   {
     "name": "西番雅书",
@@ -981,7 +1017,8 @@ const booksData = [
     "refs": "番1:4–6、12；2:1–3；3:9–20",
     "passage": "Zephaniah 3",
     "tagline": "耶和华的日子",
-    "era": "约西亚时期 · 犹大"
+    "era": "约西亚时期 · 犹大",
+    "studyPath": "books/36-zephaniah.html"
   },
   {
     "name": "哈该书",
@@ -995,7 +1032,8 @@ const booksData = [
     "refs": "该1:2–11；2:1–9；2:20–23",
     "passage": "Haggai 2",
     "tagline": "重建圣殿",
-    "era": "前520年 · 波斯犹大省"
+    "era": "前520年 · 波斯犹大省",
+    "studyPath": "books/37-haggai.html"
   },
   {
     "name": "撒迦利亚书",
@@ -1009,7 +1047,8 @@ const booksData = [
     "refs": "亚3:1–10；4:6–10；7:8–14；9:9；12:10",
     "passage": "Zechariah 3",
     "tagline": "异象与王",
-    "era": "前520年起 · 归回群体"
+    "era": "前520年起 · 归回群体",
+    "studyPath": "books/38-zechariah.html"
   },
   {
     "name": "玛拉基书",
@@ -1023,7 +1062,8 @@ const booksData = [
     "refs": "玛1:6–14；2:10–16；3:1–5；4:1–6",
     "passage": "Malachi 3",
     "tagline": "旧约尾声",
-    "era": "归回后 · 圣殿已运行"
+    "era": "归回后 · 圣殿已运行",
+    "studyPath": "books/39-malachi.html"
   },
   {
     "name": "马太福音",
@@ -1037,7 +1077,8 @@ const booksData = [
     "refs": "太1:1；5:17–20；16:13–28；26:26–29；28:18–20",
     "passage": "Matthew 16",
     "tagline": "君王福音",
-    "era": "耶稣事奉 · 1世纪前半 · 加利利 → 耶路撒冷"
+    "era": "耶稣事奉 · 1世纪前半 · 加利利 → 耶路撒冷",
+    "studyPath": "books/40-matthew.html"
   },
   {
     "name": "马可福音",
@@ -1051,7 +1092,8 @@ const booksData = [
     "refs": "可8:27–38；9:20–27；10:35–45；15:33–39",
     "passage": "Mark 10",
     "tagline": "受苦的王",
-    "era": "耶稣事奉 · 加利利 → 十架"
+    "era": "耶稣事奉 · 加利利 → 十架",
+    "studyPath": "books/41-mark.html"
   },
   {
     "name": "路加福音",
@@ -1065,7 +1107,8 @@ const booksData = [
     "refs": "路1:1–4；4:16–21；15:11–32；19:1–10；24:25–47",
     "passage": "Luke 24",
     "tagline": "万民的救主",
-    "era": "耶稣事奉 · 赴耶路撒冷旅程"
+    "era": "耶稣事奉 · 赴耶路撒冷旅程",
+    "studyPath": "books/42-luke.html"
   },
   {
     "name": "约翰福音",
@@ -1079,7 +1122,8 @@ const booksData = [
     "refs": "约1:1–18；6:26–35、60–69；17:1–5；20:30–31",
     "passage": "John 20",
     "tagline": "道成肉身",
-    "era": "耶稣事奉 · 加利利／撒玛利亚／耶路撒冷"
+    "era": "耶稣事奉 · 加利利／撒玛利亚／耶路撒冷",
+    "studyPath": "books/43-john.html"
   },
   {
     "name": "使徒行传",
@@ -1093,7 +1137,8 @@ const booksData = [
     "refs": "徒1:8；2:14–41；10:34–48；15:1–21；28:23–31",
     "passage": "Acts 15",
     "tagline": "福音扩展",
-    "era": "复活升天后 · 耶路撒冷 → 罗马"
+    "era": "复活升天后 · 耶路撒冷 → 罗马",
+    "studyPath": "books/44-acts.html"
   },
   {
     "name": "罗马书",
@@ -1107,7 +1152,8 @@ const booksData = [
     "refs": "罗3:21–26；5:12–21；6:1–14；8:1–17；14:1–12",
     "passage": "Romans 3",
     "tagline": "福音总论",
-    "era": "约公元50年代后期 · 罗马教会"
+    "era": "约公元50年代后期 · 罗马教会",
+    "studyPath": "books/45-romans.html"
   },
   {
     "name": "哥林多前书",
@@ -1121,7 +1167,8 @@ const booksData = [
     "refs": "林前1:18–31；11:17–34；12:4–27；13；15:12–28",
     "passage": "1 Corinthians 11",
     "tagline": "十架塑造教会",
-    "era": "约公元50年代 · 希腊哥林多"
+    "era": "约公元50年代 · 希腊哥林多",
+    "studyPath": "books/46-1-corinthians.html"
   },
   {
     "name": "哥林多后书",
@@ -1135,7 +1182,8 @@ const booksData = [
     "refs": "林后3:4–18；4:7–18；5:14–21；8:20–21；12:7–10",
     "passage": "2 Corinthians 5",
     "tagline": "软弱中的职事",
-    "era": "约公元50年代 · 哥林多关系危机"
+    "era": "约公元50年代 · 哥林多关系危机",
+    "studyPath": "books/47-2-corinthians.html"
   },
   {
     "name": "加拉太书",
@@ -1149,7 +1197,8 @@ const booksData = [
     "refs": "加2:11–21；3:6–29；5:1–6、13–26；6:1–5",
     "passage": "Galatians 3",
     "tagline": "因信称义",
-    "era": "1世纪中期 · 加拉太众教会"
+    "era": "1世纪中期 · 加拉太众教会",
+    "studyPath": "books/48-galatians.html"
   },
   {
     "name": "以弗所书",
@@ -1163,7 +1212,8 @@ const booksData = [
     "refs": "弗1:3–14；2:1–22；4:1–6、25–32；6:10–20",
     "passage": "Ephesians 2",
     "tagline": "在基督里合一",
-    "era": "1世纪 · 囚禁书信／小亚细亚"
+    "era": "1世纪 · 囚禁书信／小亚细亚",
+    "studyPath": "books/49-ephesians.html"
   },
   {
     "name": "腓立比书",
@@ -1177,7 +1227,8 @@ const booksData = [
     "refs": "腓1:12–26；2:1–18；3:4–14；4:10–20",
     "passage": "Philippians 2",
     "tagline": "在基督里喜乐",
-    "era": "1世纪 · 囚禁书信／马其顿腓立比"
+    "era": "1世纪 · 囚禁书信／马其顿腓立比",
+    "studyPath": "books/50-philippians.html"
   },
   {
     "name": "歌罗西书",
@@ -1191,7 +1242,8 @@ const booksData = [
     "refs": "西1:15–23；2:8–23；3:1–17",
     "passage": "Colossians 2",
     "tagline": "基督至高",
-    "era": "1世纪 · 囚禁书信／小亚细亚歌罗西"
+    "era": "1世纪 · 囚禁书信／小亚细亚歌罗西",
+    "studyPath": "books/51-colossians.html"
   },
   {
     "name": "帖撒罗尼迦前书",
@@ -1205,7 +1257,8 @@ const booksData = [
     "refs": "帖前1:2–10；4:1–18；5:1–11、23–24",
     "passage": "1 Thessalonians 4",
     "tagline": "等候主来",
-    "era": "约公元50年代初 · 马其顿帖撒罗尼迦"
+    "era": "约公元50年代初 · 马其顿帖撒罗尼迦",
+    "studyPath": "books/52-1-thessalonians.html"
   },
   {
     "name": "帖撒罗尼迦后书",
@@ -1219,7 +1272,8 @@ const booksData = [
     "refs": "帖后2:1–3、13–17；3:6–15",
     "passage": "2 Thessalonians 3",
     "tagline": "末世辨正",
-    "era": "1世纪中期 · 同城教会后续问题"
+    "era": "1世纪中期 · 同城教会后续问题",
+    "studyPath": "books/53-2-thessalonians.html"
   },
   {
     "name": "提摩太前书",
@@ -1233,7 +1287,8 @@ const booksData = [
     "refs": "提前1:3–11；2:1–6；3:1–16；5:19–21；6:6–19",
     "passage": "1 Timothy 3",
     "tagline": "教会治理",
-    "era": "1世纪 · 提摩太在以弗所"
+    "era": "1世纪 · 提摩太在以弗所",
+    "studyPath": "books/54-1-timothy.html"
   },
   {
     "name": "提摩太后书",
@@ -1247,7 +1302,8 @@ const booksData = [
     "refs": "提后1:8–14；2:1–15；3:14–17；4:1–13",
     "passage": "2 Timothy 3",
     "tagline": "守住所托",
-    "era": "1世纪 · 保罗拘押中的托付"
+    "era": "1世纪 · 保罗拘押中的托付",
+    "studyPath": "books/55-2-timothy.html"
   },
   {
     "name": "提多书",
@@ -1261,7 +1317,8 @@ const booksData = [
     "refs": "多1:5–9；2:11–14；3:1–8",
     "passage": "Titus 3",
     "tagline": "纯正教义与善行",
-    "era": "1世纪 · 克里特岛"
+    "era": "1世纪 · 克里特岛",
+    "studyPath": "books/56-titus.html"
   },
   {
     "name": "腓利门书",
@@ -1275,7 +1332,8 @@ const booksData = [
     "refs": "门8–21",
     "passage": "Philemon 1",
     "tagline": "福音与关系",
-    "era": "1世纪 · 囚禁书信／家中教会"
+    "era": "1世纪 · 囚禁书信／家中教会",
+    "studyPath": "books/57-philemon.html"
   },
   {
     "name": "希伯来书",
@@ -1289,7 +1347,8 @@ const booksData = [
     "refs": "来2:14–18；4:14–16；8:6–13；10:1–25；12:1–3",
     "passage": "Hebrews 10",
     "tagline": "更美的基督",
-    "era": "1世纪 · 疲惫与受压的信徒"
+    "era": "1世纪 · 疲惫与受压的信徒",
+    "studyPath": "books/58-hebrews.html"
   },
   {
     "name": "雅各书",
@@ -1303,7 +1362,8 @@ const booksData = [
     "refs": "雅1:19–27；2:14–26；3:13–18；5:1–6",
     "passage": "James 2",
     "tagline": "活的信心",
-    "era": "1世纪 · 散住群体"
+    "era": "1世纪 · 散住群体",
+    "studyPath": "books/59-james.html"
   },
   {
     "name": "彼得前书",
@@ -1317,7 +1377,8 @@ const booksData = [
     "refs": "彼前1:3–9；2:4–12、21–25；3:15–16；5:1–4",
     "passage": "1 Peter 2",
     "tagline": "寄居者的盼望",
-    "era": "1世纪 · 小亚细亚五地区"
+    "era": "1世纪 · 小亚细亚五地区",
+    "studyPath": "books/60-1-peter.html"
   },
   {
     "name": "彼得后书",
@@ -1331,7 +1392,8 @@ const booksData = [
     "refs": "彼后1:16–21；2:1–3；3:3–18",
     "passage": "2 Peter 3",
     "tagline": "防备假师傅",
-    "era": "1世纪 · 假师傅与再来争议"
+    "era": "1世纪 · 假师傅与再来争议",
+    "studyPath": "books/61-2-peter.html"
   },
   {
     "name": "约翰一书",
@@ -1345,7 +1407,8 @@ const booksData = [
     "refs": "约壹1:5–2:2；3:16–18；4:1–12；5:11–13",
     "passage": "1 John 4",
     "tagline": "确据与相爱",
-    "era": "1世纪后期 · 群体分裂"
+    "era": "1世纪后期 · 群体分裂",
+    "studyPath": "books/62-1-john.html"
   },
   {
     "name": "约翰二书",
@@ -1359,7 +1422,8 @@ const booksData = [
     "refs": "约贰4–11",
     "passage": "2 John 1",
     "tagline": "真理中的爱",
-    "era": "1世纪后期 · 巡回教导网络"
+    "era": "1世纪后期 · 巡回教导网络",
+    "studyPath": "books/63-2-john.html"
   },
   {
     "name": "约翰三书",
@@ -1373,7 +1437,8 @@ const booksData = [
     "refs": "约叁5–12",
     "passage": "3 John 1",
     "tagline": "接待与忠心",
-    "era": "1世纪后期 · 家中教会／接待网络"
+    "era": "1世纪后期 · 家中教会／接待网络",
+    "studyPath": "books/64-3-john.html"
   },
   {
     "name": "犹大书",
@@ -1387,7 +1452,8 @@ const booksData = [
     "refs": "犹3–4；17–25",
     "passage": "Jude 1",
     "tagline": "为真道争辩",
-    "era": "1世纪 · 假教训渗入群体"
+    "era": "1世纪 · 假教训渗入群体",
+    "studyPath": "books/65-jude.html"
   },
   {
     "name": "启示录",
@@ -1401,7 +1467,8 @@ const booksData = [
     "refs": "启1:9–20；5:1–14；18:9–20；21:1–8；22:1–5",
     "passage": "Revelation 5",
     "tagline": "羔羊得胜",
-    "era": "1世纪 · 拔摩／亚细亚七教会"
+    "era": "1世纪 · 拔摩／亚细亚七教会",
+    "studyPath": "books/66-revelation.html"
   }
 ];
 const categories = [
@@ -1431,7 +1498,7 @@ function renderBooks(){
   const field=(label,text,cls='')=>`<div class="book-field ${cls}"><h5>${label}</h5><p>${bookEscape(text)}</p></div>`;
   const steps=b.outline.split('；').map(x=>`<li>${bookEscape(x)}</li>`).join('');
   card.innerHTML=`<div class="book-top"><div class="book-num">${String(idx+1).padStart(2,'0')}</div><div><h4>${bookEscape(b.name)}</h4><small>${bookEscape(b.tagline)}</small></div></div>
-   <div class="book-era">◷ ${bookEscape(b.era)}</div><div class="book-fields">
+   <div class="book-era">◷ ${bookEscape(b.era)}</div><p><a class="btn" href="${bookEscape(b.studyPath)}">进入逐卷精读专页 ↗</a></p><div class="book-fields">
    ${field('01 · 历史、地理与写作处境',b.context)}
    <div class="book-field"><h5>02 · 章节路线：先看写了什么</h5><ol class="book-flow" aria-label="章节结构">${steps}</ol></div>
    ${field('03 · 为什么写：核心张力与论证',b.argument,'core')}
